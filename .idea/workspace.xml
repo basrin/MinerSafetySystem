@@ -12,8 +12,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e503652d-f14b-43c2-b80b-68314af42ed0" name="Default" comment="Added">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Estimote Application/Demos/src/main/java/com/estimote/examples/demos/NotifyDemoActivity.java" afterPath="$PROJECT_DIR$/Estimote Application/Demos/src/main/java/com/estimote/examples/demos/NotifyDemoActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="MinerSafetySystem.iws" />
@@ -97,6 +95,8 @@
         <option value="Mather" />
       </list>
     </option>
+    <option name="UPDATE_TYPE" value="MERGE" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
@@ -432,6 +432,11 @@
       <created>1411838305848</created>
       <updated>1411838305848</updated>
     </task>
+    <task id="LOCAL-00001" summary="Added">
+      <created>1411848309309</created>
+      <updated>1411848309309</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
