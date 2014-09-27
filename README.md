@@ -1,4 +1,4 @@
 MinerSafetySystem
 =================
 
-Myo & Estimote Miner Alert System
+Myo and Estimote Miner Alert System
