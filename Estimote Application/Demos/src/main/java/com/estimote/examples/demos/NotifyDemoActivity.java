@@ -20,15 +20,6 @@ import java.util.concurrent.TimeUnit;
 
 import static com.estimote.sdk.BeaconManager.MonitoringListener;
 
-/**
- * Demo that shows how to use region monitoring. Two important steps are:
- * <ul>
- * <li>start monitoring region, in example in {@link #onResume()}</li>
- * <li>respond to monitoring changes by registering {@link MonitoringListener} in {@link BeaconManager}</li>
- * </ul>
- *
- * @author wiktor@estimote.com (Wiktor Gworek)
- */
 public class NotifyDemoActivity extends Activity {
 
   private static final String TAG = NotifyDemoActivity.class.getSimpleName();
@@ -44,7 +35,8 @@ public class NotifyDemoActivity extends Activity {
     setContentView(R.layout.notify_demo);
     getActionBar().setDisplayHomeAsUpEnabled(true);
 
-    Beacon beacon = getIntent().getParcelableExtra(ListBeaconsActivity.EXTRAS_BEACON);
+     
+    final Beacon beacon = getIntent().getParcelableExtra(ListBeaconsActivity.EXTRAS_BEACON);
     region = new Region("regionId", beacon.getProximityUUID(), beacon.getMajor(), beacon.getMinor());
     notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
     beaconManager = new BeaconManager(this);
@@ -56,12 +48,15 @@ public class NotifyDemoActivity extends Activity {
     beaconManager.setMonitoringListener(new MonitoringListener() {
       @Override
       public void onEnteredRegion(Region region, List<Beacon> beacons) {
-        postNotification("Entered region");
+        postNotification("Entered region"+beacon.getMeasuredPower());
+          postNotificationTemperature("Temp:");
+
       }
 
       @Override
       public void onExitedRegion(Region region) {
         postNotification("Exited region");
+          postNotificationTemperature("Exited region");
       }
     });
   }
@@ -122,4 +117,28 @@ public class NotifyDemoActivity extends Activity {
     TextView statusTextView = (TextView) findViewById(R.id.status);
     statusTextView.setText(msg);
   }
+
+    private void postNotificationTemperature(String msg) {
+        Intent notifyIntent = new Intent(NotifyDemoActivity.this, NotifyDemoActivity.class);
+        notifyIntent.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+        PendingIntent pendingIntent = PendingIntent.getActivities(
+                NotifyDemoActivity.this,
+                0,
+                new Intent[]{notifyIntent},
+                PendingIntent.FLAG_UPDATE_CURRENT);
+
+        Notification notification = new Notification.Builder(NotifyDemoActivity.this)
+                .setSmallIcon(R.drawable.beacon_gray)
+                .setContentTitle("Notify Demo")
+                .setContentText(msg)
+                .setAutoCancel(true)
+                .setContentIntent(pendingIntent)
+                .build();
+        notification.defaults |= Notification.DEFAULT_SOUND;
+        notification.defaults |= Notification.DEFAULT_LIGHTS;
+        notificationManager.notify(NOTIFICATION_ID, notification);
+
+        TextView statusTextView = (TextView) findViewById(R.id.statusTemp);
+        statusTextView.setText(msg);
+    }
 }

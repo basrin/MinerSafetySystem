@@ -15,7 +15,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:padding="5dp"
-            android:background="@android:color/holo_orange_dark"
+            android:background="@android:color/holo_red_dark"
             android:textColor="@android:color/white"
             android:text="Last posted notification:"
             android:textSize="18dp"/>
@@ -24,8 +24,26 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:background="@android:color/holo_orange_light"
+            android:background="@android:color/holo_red_light"
             android:textColor="@android:color/black"
             android:text="None"
             android:textSize="18dp"/>
+
+    <TextView android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:padding="5dp"
+        android:background="@android:color/holo_blue_dark"
+        android:textColor="@android:color/white"
+        android:text="Last posted temperature notification:"
+        android:textSize="18dp"/>
+
+    <TextView android:id="@+id/statusTemp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:background="@android:color/holo_blue_light"
+        android:textColor="@android:color/black"
+        android:text="None"
+        android:textSize="18dp"/>
 </LinearLayout>
