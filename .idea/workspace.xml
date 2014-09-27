@@ -11,7 +11,7 @@
     </shared>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e503652d-f14b-43c2-b80b-68314af42ed0" name="Default" comment="Added">
+    <list default="true" id="e503652d-f14b-43c2-b80b-68314af42ed0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="MinerSafetySystem.iws" />
@@ -45,20 +45,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DistanceBeaconActivity.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="DistanceBeaconActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Estimote Application/Demos/src/main/java/com/estimote/examples/demos/DistanceBeaconActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1815">
+            <state vertical-scroll-proportion="0.6413302" vertical-offset="0" max-vertical-offset="1815">
               <caret line="33" column="20" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NotifyDemoActivity.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="NotifyDemoActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Estimote Application/Demos/src/main/java/com/estimote/examples/demos/NotifyDemoActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.31591448" vertical-offset="392" max-vertical-offset="2235">
+            <state vertical-scroll-proportion="0.0" vertical-offset="392" max-vertical-offset="2235">
               <caret line="35" column="4" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -436,7 +436,11 @@
       <created>1411848309309</created>
       <updated>1411848309309</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added">
+      <created>1411848591307</created>
+      <updated>1411848591307</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -512,14 +516,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Estimote Application/Demos/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="900">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Estimote Application/Demos/src/main/java/com/estimote/examples/demos/DistanceBackgroundView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.35629454" vertical-offset="0" max-vertical-offset="525">
@@ -528,23 +524,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Estimote Application/Demos/src/main/java/com/estimote/examples/demos/DistanceBeaconActivity.java">
+    <entry file="file://$PROJECT_DIR$/Estimote Application/Demos/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1394" max-vertical-offset="1815">
-          <caret line="33" column="20" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="900">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Estimote Application/Demos/src/main/java/com/estimote/examples/demos/NotifyDemoActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31591448" vertical-offset="392" max-vertical-offset="2235">
+        <state vertical-scroll-proportion="0.0" vertical-offset="392" max-vertical-offset="2235">
           <caret line="35" column="4" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2528#2805#0" expanded="true" />
             <element signature="e#2798#2799#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Estimote Application/Demos/src/main/java/com/estimote/examples/demos/DistanceBeaconActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6413302" vertical-offset="0" max-vertical-offset="1815">
+          <caret line="33" column="20" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
