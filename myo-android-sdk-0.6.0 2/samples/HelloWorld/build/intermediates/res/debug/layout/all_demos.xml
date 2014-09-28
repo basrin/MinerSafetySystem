@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/distance_demo_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Distance Demo" />
+
+    <Button
+        android:id="@+id/notify_demo_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Notify Demo" />
+
+    <Button
+        android:id="@+id/characteristics_demo_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Change Beacon's Minor Demo" />
+
+    <Button
+        android:id="@+id/pair_myo_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pair Myo" />
+
+</LinearLayout><!-- From: file:/Users/Taimoor/Desktop/myo-android-sdk-0.6.0%202/samples/HelloWorld/src/main/res/layout/all_demos.xml -->

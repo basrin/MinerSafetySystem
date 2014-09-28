@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="1_estimote-sdk-preview">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/HelloWorld/libs/estimote-sdk-preview.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

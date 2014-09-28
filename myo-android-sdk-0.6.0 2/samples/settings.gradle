@@ -1,0 +1,4 @@
+include ':Background', ':estimote-sdk-preview'
+include ':Glass'
+include ':HelloWorld'
+include ':MultipleMyos'
