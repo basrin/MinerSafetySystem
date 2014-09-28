@@ -1,10 +1,13 @@
 var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
+var Schema   = mongoose.Schema;
 var database = {};
 
 mongoose.connect('mongodb://admin:miner-safety-password@ds039850.mongolab.com:39850/miner-safety-system');
 
 var MoteSchema = new Schema({
+      notificationID: Number,
+      userIP : String,
+      co2Level: Number,
       moteId: String,
       date: String,
       temperature: Number,
@@ -17,7 +20,14 @@ var MoteSchema = new Schema({
 var MoteModel = mongoose.model('Measurements', MoteSchema);
 
 
-database.save = function (mongoData, success, failure) {
+database.save = function (mongoData, success, failure, req) {
+    if (req) {
+        mongoData.userIP = req.headers['x-forwarded-for'] ||
+                           req.connection.remoteAddress ||
+                           req.socket.remoteAddress ||
+                           req.connection.socket.remoteAddress;
+    }
+
     var measurement = new MoteModel(mongoData);
 
     measurement.save(function (err) {

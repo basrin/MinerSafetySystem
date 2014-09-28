@@ -20,6 +20,8 @@ routes.fileNotFound = function (req, res) {
 
 routes.databaseAPI = function (req, res) {
 
+    console.log("request body: ", req.body);
+
     // Empty response
     if (!req.body) {
         res.json({message: 'Invalid request body'});
@@ -33,7 +35,7 @@ routes.databaseAPI = function (req, res) {
             res.json({message: 'Success!'});
         }, function (error) {
             res.json({message: 'Failure!', err: error});
-        });
+        }, req);
     } else {
     // Without data (nedd to retrieve from db)
         // res needs to be passed in because of callback hell

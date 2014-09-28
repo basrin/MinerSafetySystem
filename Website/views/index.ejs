@@ -9,7 +9,7 @@
     <div class="container">
         <div class="row clearfix">
             <div class="column full">
-                <h1>Miner Safety System</h1>
+                <h1 class="header"><img class="logo" src="images/construction4.svg" alt="helmet-logo">Miner Safety System</h1>
                 <h2>View Attribute History By Estimote</h2>
                 <div id="mote-temp-over-time">
                     <label for="estimote-ids">Select an Estimote: </label>
@@ -22,16 +22,21 @@
         </div>
         <div class="row clearfix">
             <div class="column full">
-                <h1>All Temperatures</h1>
-                <button>Save test data!</button>
-                <div id="all-measured-temperatures"></div>
-                <div id="example"></div>
-                <div class="ejs"> <%= ejsData %></div>
+                <h2>Most Recent Measurements</h2>
+                <label for="estimote-attr-evo">Select a Measurement: </label>
+                <select id="estimote-attr-evo"></select>
+                <div id="recent-measurements-chart"></div>
             </div>
         </div>
         <div class="row clearfix">
             <div class="column full">
-
+                <h2>All Temperatures</h2>
+                <div id="all-measured-temperatures"></div>
+            </div>
+        </div>
+        <div class="row clearfix">
+            <div class="column full">
+                <button>Save test data!</button>
             </div>
         </div>
     </div>
@@ -48,6 +53,7 @@
               date: new Date(),
               temperature: ((Math.random()*10)/5)*(Math.pow(-1, Math.floor(Math.random()*10))),
               orientation: Math.floor(Math.random()*10),
+              co2Level: Math.floor(Math.random()*10)
             };
 
             $.post("/data", data, function(data,status){
@@ -84,12 +90,14 @@
 
                 var idSelectBox = $('#estimote-ids');
                 var attributeSelectBox = $('#estimote-attributes');
+                var evoAttributeSelectBox = $('#estimote-attr-evo');
                 var attributes = [
                     'temperature',
                     'orientation',
+                    'co2Level'
                 ];
                 for (var i = 0; i < attributes.length; i++) {
-                    attributeSelectBox.append($('<option/>').attr('value', attributes[i]).text(attributes[i]));
+                    attributeSelectBox.add(evoAttributeSelectBox).append($('<option/>').attr('value', attributes[i]).text(attributes[i]));
                 }
 
                 function updateAttributeChart () {
@@ -108,9 +116,28 @@
                         height:500
                     });
                 }
+
+                function updateRecentMeasurement () {
+                    var attrVal = this.value
+                    drawLineChart({
+                        id : 'recent-measurements-chart',
+                        columns: [
+                            {title:'EstimoteId', type:'string'},
+                            {title: attrVal, type:'number'}
+                        ],
+                        rows: getMostRecentAttr(mongoData, attrVal),
+                        title: 'Most recent ' + attrVal.slice(0,1).toUpperCase() + attrVal.slice(1) + ' Measurement',
+                        width:'100%',
+                        height:500
+                    });
+                }
+
+                // init
                 updateAttributeChart();
+                updateRecentMeasurement.call({value:'temperature'});
                 attributeSelectBox.on('change', updateAttributeChart);
                 idSelectBox.on('change', updateAttributeChart);
+                evoAttributeSelectBox.on('change', updateRecentMeasurement);
 
             });
         }
@@ -158,6 +185,44 @@
             return rows;
         }
 
+        function getMostRecentAttr(data, attr) {
+            var values = [];
+            var motes = {};
+
+            data.sort(function (a, b) {
+                idA   = a.moteId.slice(-2);
+                idB   = b.moteId.slice(-2);
+
+                if (idA < idB) {
+                    return -1;
+                }
+                if (idA > idB) {
+                    return 1;
+                }
+                return 0;
+            });
+
+            for (var i = 0; i < data.length; i++) {
+                if (motes[data[i].moteId]) {
+                    var storedDate = new Date(motes[data[i].moteId]);
+                    var newDate = new Date(data[i].date);
+
+                    if (newDate > storedDate) {
+                        motes[data[i].moteId] = data[i][attr];
+                    }
+                } else {
+                    motes[data[i].moteId] = data[i][attr];
+                }
+            }
+
+            for (prop in motes) {
+                values.push([prop, motes[prop]]);
+            }
+
+            return values;
+
+        }
+
         function getAllTemperatures (data) {
             var temperatureRows = [];
             for (var i = 0; i < data.length; i++) {
@@ -167,6 +232,7 @@
         }
 
         function drawLineChart (options) {
+            options.colors = ['#f63'];
             var dataTable = new google.visualization.DataTable();
             for (var i = 0; i < options.columns.length; i++) {
                 dataTable.addColumn(options.columns[i].type, options.columns[i].title);
