@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="myosdk">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Eclipse/MyoSdk/libs/myosdk.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

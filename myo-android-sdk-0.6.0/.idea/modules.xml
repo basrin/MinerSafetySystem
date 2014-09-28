@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Eclipse/Background/Background.iml" filepath="$PROJECT_DIR$/Eclipse/Background/Background.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Eclipse/Glass/Glass.iml" filepath="$PROJECT_DIR$/Eclipse/Glass/Glass.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Eclipse/HelloWorld/HelloWorld.iml" filepath="$PROJECT_DIR$/Eclipse/HelloWorld/HelloWorld.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Eclipse/MultipleMyos/MultipleMyos.iml" filepath="$PROJECT_DIR$/Eclipse/MultipleMyos/MultipleMyos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Eclipse/MyoSdk/MyoSdk.iml" filepath="$PROJECT_DIR$/Eclipse/MyoSdk/MyoSdk.iml" />
+      <module fileurl="file://$PROJECT_DIR$/samples/MultipleMyos/src/main/main.iml" filepath="$PROJECT_DIR$/samples/MultipleMyos/src/main/main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/samples/Glass/src/main/main1.iml" filepath="$PROJECT_DIR$/samples/Glass/src/main/main1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/samples/Background/src/main/main2.iml" filepath="$PROJECT_DIR$/samples/Background/src/main/main2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/samples/HelloWorld/src/main/main3.iml" filepath="$PROJECT_DIR$/samples/HelloWorld/src/main/main3.iml" />
+    </modules>
+  </component>
+</project>
+

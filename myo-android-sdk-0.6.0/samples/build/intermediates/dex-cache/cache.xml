@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pre-dex-items>
+
+    <item
+        dex="/Users/Buruc/WearHacks/MinerSafetySystem/myo-android-sdk-0.6.0/samples/HelloWorld/build/intermediates/pre-dexed/debug/classes-1536ffa9a16de40f21ace9a2c25db7bebc71d79b.jar"
+        jar="/Users/Buruc/WearHacks/MinerSafetySystem/myo-android-sdk-0.6.0/samples/HelloWorld/build/intermediates/exploded-aar/com.thalmic/myosdk/0.6.0/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="99725a5ad7b296c3f0aacc3cccc892ffee6a88a8"/>
+    <item
+        dex="/Users/Buruc/WearHacks/myo-android-sdk-0.6.0/samples/HelloWorld/build/intermediates/pre-dexed/debug/classes-863ca1bb4c2e5251050577e29c318377e4fe019f.jar"
+        jar="/Users/Buruc/WearHacks/myo-android-sdk-0.6.0/samples/HelloWorld/build/intermediates/exploded-aar/com.thalmic/myosdk/0.6.0/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="99725a5ad7b296c3f0aacc3cccc892ffee6a88a8"/>
+    <item
+        dex="/Users/Buruc/WearHacks/myo-android-sdk-0.6.0/samples/HelloWorld/build/intermediates/pre-dexed/debug/native-libs-c8d01f09f9784cb85fb906217e282222ef00028b.jar"
+        jar="/Users/Buruc/WearHacks/myo-android-sdk-0.6.0/samples/HelloWorld/build/intermediates/exploded-aar/com.thalmic/myosdk/0.6.0/libs/native-libs.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="a8d40dfc06ce9040cbe2da440a887808d4f275bc"/>
+    <item
+        dex="/Users/Buruc/WearHacks/MinerSafetySystem/myo-android-sdk-0.6.0/samples/HelloWorld/build/intermediates/pre-dexed/debug/native-libs-4928ebb23acc2cc58a829b6d849b324175f79c0a.jar"
+        jar="/Users/Buruc/WearHacks/MinerSafetySystem/myo-android-sdk-0.6.0/samples/HelloWorld/build/intermediates/exploded-aar/com.thalmic/myosdk/0.6.0/libs/native-libs.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="a8d40dfc06ce9040cbe2da440a887808d4f275bc"/>
+
+</pre-dex-items>
