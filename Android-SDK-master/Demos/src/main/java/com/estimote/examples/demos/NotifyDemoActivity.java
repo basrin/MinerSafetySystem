@@ -62,7 +62,6 @@ public class NotifyDemoActivity extends Activity {
         beaconManager.setBackgroundScanPeriod(TimeUnit.SECONDS.toMillis(1), 0);
 
 
-
         beaconManager.setMonitoringListener(new MonitoringListener() {
             @Override
             public void onEnteredRegion(Region region, List<Beacon> beacons) {
@@ -77,7 +76,7 @@ public class NotifyDemoActivity extends Activity {
                 postNotification("Exited region");
                 postNotificationCO2("CO2 Emissions Stable", false);
                 postNotificationTemperature("25");
-               // postNotificationBattery();
+                // postNotificationBattery();
             }
         });
     }
@@ -163,17 +162,22 @@ public class NotifyDemoActivity extends Activity {
                 @Override
                 public void onTick(long l) {
                     int temperature = random.nextInt(3) + 21;
-                    statusTextViewTemperature.setText(String.valueOf(temperature));
+                    statusTextViewTemperature.setText("" + String.valueOf(temperature));
                 }
 
                 @Override
                 public void onFinish() {
                     statusTextView.setText("CO2 level is too high!");
+
+
+                    //TODO
                     //MYO Vibrate
 
                 }
             }.start();
         } else {
+
+            //TODO
             // Stop vibration of MYO
         }
 
