@@ -3,15 +3,17 @@ MinerSafetySystem
 
 A [WearHacks](http://wearhacks.com/) project.
 
-A Myo-Estimote Miner Alert System
+Myo-Estimote Miner Alert System:
 
 #### The Hardware
 
 The MinerSafetySystem utilizes the [Myo](https://www.thalmic.com/en/myo/) by Thalmic Labs & the      [Estimote Beacons](http://estimote.com/).
 
-The Myo is a gesture control armband. which uses the muscle electrical activity to recognize hand and arm gestures. In addition, it provides vibrating tactile feedback.
+The Myo is a gesture control armband, which uses the muscle's electrical activity to recognize hand and arm gestures. In addition, it provides vibration based tactile feedback.
 
 The Estimote is a beacon that can provided contextual data such as location, temperature and motion via bluetooth.
+
+Note: Currently the temperature and motion features are not implemented in the SDK.
 
 #### Use Case
 
@@ -22,6 +24,10 @@ Note: The SDK by design requires the Myo to be paired with an Android or iOS pho
 Estimote beacons are placed throughout the mine at a regular interval. We designed the Myo to stop vibrating once the miner passes the last Estimote placed at the entrance of the mine.
 
 Note: Due to the limitations of the Estimote SDK further features could not be implemented, such as the speed of an existing miner between two estimotes.
+
+#### Data Website
+
+Using Google Charts we built a [website] (http://miner-safety-system.herokuapp.com/) that can display various data such as temperature and orientation coming from each Estimote in the mine.
 
 
 
